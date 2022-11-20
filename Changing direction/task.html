@@ -1,0 +1,45 @@
+<h2>Changing direction</h2>
+<p>
+  You are given a list of integers.
+  Your task in this mission is to find, how many times the sorting direction was changed in the given list. If the elements are equal - the previous sorting direction remains the same, if the sequence starts from the same elements - look for the next different to determine the sorting direction.
+</p>
+<p>
+  Let's look on the scheme:
+</p>
+<p style="text-align: center;">
+<img alt="changing_dir" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/476d1153ac6c4e35adccfbb8c4a58991/changing_dir.png" style="max-height: 255px" title="changing_dir"/>
+</p>
+<p>
+There are three sorting directions:
+<ul>
+<li>on the chunk <b class="code">1, 2, 2</b> - up (increasing);</li>
+<li>on the chunk <b class="code">2, 1</b> - down (decreasing);</li>
+<li>and on the chunk <b class="code">1, 2, 2</b> - up again.</li>
+</ul>
+So, you have two points of changing the sorting direction: #1 - from up to down, and #2 - from down to up. That's the result your function should return.
+</p>
+<p>
+<strong>Input:</strong> A list of integers.
+</p>
+<p>
+<strong>Output:</strong> Integer.
+</p>
+<div class="for_info_only">
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert changing_direction([1, 2, 3, 4, 5]) == 0
+assert changing_direction([1, 2, 3, 2, 1]) == 1
+assert changing_direction([1, 2, 2, 1, 2, 2]) == 2
+</pre>
+</div>
+<p>
+<strong>Precondition:</strong>
+<ul>
+<li><i>the list is non-empty;</i></li>
+<li><i>the elements in the list are positive integers.</i></li>
+</ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/changing-direction">See the task on CheckiO</a></p>
