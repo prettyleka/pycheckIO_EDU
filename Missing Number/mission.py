@@ -1,0 +1,18 @@
+def missing_number(items: list[int]) -> int:
+    l = len(items)
+    sorted(items)
+    if items[0]==0:
+        step = sorted(items)[-1]//l
+    else:
+        step = sorted(items)[-1]//(l+1)
+    for x in range(items[0], items[-1]+1,step):
+        if x not in items:
+            return x
+
+print("Example:")
+print(missing_number([0, 1, 3, 4, 2, 6, 9, 7, 8]))
+
+assert missing_number([1, 4, 2, 5]) == 3
+assert missing_number([2, 6, 8]) == 4
+
+print("The mission is done! Click 'Check Solution' to earn rewards!")
