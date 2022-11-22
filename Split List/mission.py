@@ -1,0 +1,46 @@
+def split_list(items: list) -> list:
+    i=0
+    if len(items)==0:
+        return [[],[]]
+    elif len(items)==1:
+        return [[items[0]],[]]
+    elif len(items)%2==0:
+        if items[0] is int:
+            l = len(items)//2-1
+            f = items[:items[l]]
+            s = items[items[l]:]
+            return[f, s]
+        else:
+            l = len(items)//2
+            f = items[:l]
+            s = items[l:]
+            return[f, s]
+    else:
+        if items[0] is int:
+            l = len(items)//2
+            f = items[:items[l]]
+            s = items[items[l]:]
+            return[f, s]
+        else:
+            l = len(items)//2+1
+            f = items[:l]
+            s = items[l:]
+            return[f, s]
+
+
+
+
+
+
+if __name__ == '__main__':
+    #print("Example:")
+    #print(split_list([1, 2, 3, 4, 5, 6]))
+
+    # These "asserts" are used for self-checking and not for an auto-testing
+    #assert split_list([1, 2, 3, 4, 5, 6]) == [[1, 2, 3], [4, 5, 6]]
+    #assert split_list([1, 2, 3]) == [[1, 2], [3]]
+    #assert split_list([1, 2, 3, 4, 5]) == [[1, 2, 3], [4, 5]]
+    #assert split_list([1]) == [[1], []]
+    #assert split_list([]) == [[], []]
+    assert list(split_list([True, False, False, False])) == [[True, False], [False, False]]
+    print("Coding complete? Click 'Check' to earn cool rewards!")

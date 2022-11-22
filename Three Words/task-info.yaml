@@ -1,0 +1,31 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "import re\n\n\ndef checkio(words: str) -> bool:\n    count=0\n    for x in\
+    \ words.split(\" \"):\n        z = re.findall(\"[a-zA-z]+\", x)\n        if len(z)==0:\n\
+    \            count=0\n        else:\n            count+=1\n            if count>=3:\n\
+    \                return True\n    if count>=3:\n        return True\n    else:\n\
+    \        return False\n\n\n#These \"asserts\" using only for self-checking and\
+    \ not necessary for auto-testing\nif __name__ == '__main__':\n    #print('Example:')\n\
+    \    #print(checkio(\"Hello World hello\"))\n    \n    assert checkio(\"Hello\
+    \ World hello\") == True, \"Hello\"\n    assert checkio(\"He is 123 man\") ==\
+    \ False, \"123 man\"\n    assert checkio(\"1 2 3 4\") == False, \"Digits\"\n \
+    \   assert checkio(\"bla bla bla bla\") == True, \"Bla Bla\"\n    assert checkio(\"\
+    Hi\") == False, \"Hi\"\n    print(\"Coding complete? Click 'Check' to review your\
+    \ tests and earn cool rewards!\")\n"
+  learner_created: false
+status: Solved
+code: "import re\n\n\ndef checkio(words: str) -> bool:\n    count=0\n    for x in\
+  \ words.split(\" \"):\n        z = re.findall(\"[a-zA-z]+\", x)\n        if len(z)==0:\n\
+  \            count=0\n        else:\n            count+=1\n            if count>=3:\n\
+  \                return True\n    if count>=3:\n        return True\n    else:\n\
+  \        return False\n\n\n#These \"asserts\" using only for self-checking and not\
+  \ necessary for auto-testing\nif __name__ == '__main__':\n    #print('Example:')\n\
+  \    #print(checkio(\"Hello World hello\"))\n    \n    assert checkio(\"Hello World\
+  \ hello\") == True, \"Hello\"\n    assert checkio(\"He is 123 man\") == False, \"\
+  123 man\"\n    assert checkio(\"1 2 3 4\") == False, \"Digits\"\n    assert checkio(\"\
+  bla bla bla bla\") == True, \"Bla Bla\"\n    assert checkio(\"Hi\") == False, \"\
+  Hi\"\n    print(\"Coding complete? Click 'Check' to review your tests and earn cool\
+  \ rewards!\")\n"
+seconds_from_change: 1
