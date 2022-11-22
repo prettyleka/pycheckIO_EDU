@@ -1,0 +1,52 @@
+<h2>Duplicate Zeros</h2>
+<p>
+<i>
+        "Sometimes, zeros resemble very tasty donut. And every time we finish a donut, we want another, and then another, and then another..."
+    </i>
+</p>
+<p>
+    You are given a list of integers. Your task in this mission is to duplicate (<b class="code">..., 🍩, ... --&gt; ..., 🍩, 🍩, ...</b>) all zeros (think about donuts ;-P) and return the result as any Iterable. Let's look on the example:
+</p>
+<p>
+<pre class="brush: python">
+donuts: list[int] = [1, 0, 2, 0]
+print(list(duplicate_zeros(donuts)))
+    </pre>
+<div class="output">
+<p><b>Output:</b></p>
+<pre>
+[1, 0, 0, 2, 0, 0]
+        </pre>
+</div>
+</p>
+<p>
+<strong>Input:</strong> A List of integers.
+</p>
+<p>
+<strong>Output:</strong> A List on another Iterable (tuple, generator, iterator) of integers.
+</p>
+<div class="for_info_only">
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert list(duplicate_zeros([1, 0, 2, 3, 0, 4, 5, 0])) == [
+    1,
+    0,
+    0,
+    2,
+    3,
+    0,
+    0,
+    4,
+    5,
+    0,
+    0,
+]
+assert list(duplicate_zeros([0, 0, 0, 0])) == [0, 0, 0, 0, 0, 0, 0, 0]
+assert list(duplicate_zeros([100, 10, 0, 101, 1000])) == [100, 10, 0, 0, 101, 1000]
+</pre>
+</div>
+<p><i>If you have solved this mission, you can enjoy a 🍩 with peace of mind!=)</i></p>
+
+
+<p><a href="https://py.checkio.org/en/mission/duplicate-zeros">See the task on CheckiO</a></p>
