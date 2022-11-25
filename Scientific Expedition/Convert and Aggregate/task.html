@@ -1,0 +1,36 @@
+<h2>Convert and Aggregate</h2>
+<!-- Describe task in general -->
+<p>
+ You are given a list of tuples. Each tuple consists of two values: a string
+    and an integer.
+    You need to create and return a dictionary,
+    where keys are string values from input tuples and values are aggregated (summed) integer
+    values from input tuples for each specific key. The resulted dictionary
+    should not include items with empty key or zero value.
+</p>
+<!-- Explain input and output values -->
+<p>
+ <strong>
+  Input:
+ </strong>
+ List of tuples.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ Dictionary.
+</p>
+<p>
+ <strong>
+  Examples:
+ </strong>
+</p>
+<pre class="brush: python">assert conv_aggr([(&quot;a&quot;, 7), (&quot;b&quot;, 8), (&quot;a&quot;, 10)]) == {&quot;a&quot;: 17, &quot;b&quot;: 8}
+assert conv_aggr([]) == {}
+assert conv_aggr([(&quot;a&quot;, 5), (&quot;a&quot;, -5)]) == {}
+assert conv_aggr([(&quot;a&quot;, 5), (&quot;a&quot;, 5), (&quot;a&quot;, 0)]) == {&quot;a&quot;: 10}
+</pre>
+
+
+<p><a href="https://py.checkio.org/en/mission/convert-and-aggregate">See the task on CheckiO</a></p>

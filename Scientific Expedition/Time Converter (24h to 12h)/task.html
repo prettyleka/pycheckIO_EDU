@@ -1,0 +1,53 @@
+<h2>Time Converter (24h to 12h)</h2>
+<!-- Describe task in general -->
+<p>
+    You prefer a good old 12-hour time format. But the modern world we live in would rather use the 24-hour format and you see it everywhere. Your task is to convert the time from the 24-h format into 12-h format by following the next rules:
+    <ul>
+<li>
+            - the output format should be <b class="code">'hh:mm a.m.'</b> (for hours before midday) or <b class="code">'hh:mm p.m.'</b> (for hours after midday);
+        </li>
+<li>
+            - if hours is less than 10 - don't write a '0' before it. For example: <b class="code">'9:05 a.m.'</b>.
+        </li>
+</ul>
+
+    Here you can find some useful information about the <a href="https://en.wikipedia.org/wiki/12-hour_clock" target="_blank">12-hour format</a>.
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/d755e36637094c5384367b15852d9143/time.png" style="max-height: 220px" title="Time"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Time in the 24-hour format (as a string).
+</p>
+<p>
+<strong>Output:</strong> Time in the 12-hour format (as a string). 
+</p>
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert time_converter(&quot;12:30&quot;) == &quot;12:30 p.m.&quot;
+assert time_converter(&quot;09:00&quot;) == &quot;9:00 a.m.&quot;
+</pre>
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+<strong>How it is used:</strong>
+    For work with the different time formats.
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>Precondition:</strong>
+    '00:00' &lt;= time &lt;= '23:59'
+</p>
+<p>
+<i>Also interesting fact about "12:00 p.m." and "12:00 a.m.". The name of this fact is "Confusion at noon and
+        midnight" - problem using "p.m./ a.m." with this magical time "12:00". You can find information about this
+        in <a href="https://en.wikipedia.org/wiki/12-hour_clock#Confusion_at_noon_and_midnight" target="_blank">Wikipedia</a> or just google it.</i>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/time-converter-24h-to-12h">See the task on CheckiO</a></p>

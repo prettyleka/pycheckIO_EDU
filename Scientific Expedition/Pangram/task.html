@@ -1,0 +1,38 @@
+<h2>Pangram</h2>
+<p>
+    A pangram (Greek: <i>παν γράμμα</i>, pan gramma, "every letter") or holoalphabetic sentence for a given alphabet is a sentence using every letter of the alphabet at least once. Perhaps you are familiar with the well known pangram <i>"The quick brown fox jumps over the lazy dog"</i>.
+</p>
+<p>
+    For this mission, we will use the latin alphabet (A-Z). You are given a text with latin letters and punctuation symbols. You need to check if the sentence is a pangram or not. Case does not matter.
+</p>
+<p>
+<strong>Input:</strong> A text as a string.
+</p>
+<p>
+<strong>Output:</strong> Whether the sentence is a pangram or not as a boolean.
+</p>
+<div class="for_info_only">
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert check_pangram(&quot;The quick brown fox jumps over the lazy dog.&quot;) == True
+assert check_pangram(&quot;ABCDEF&quot;) == False
+assert check_pangram(&quot;abcdefghijklmnopqrstuvwxyz&quot;) == True
+assert check_pangram(&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;) == True
+</pre>
+</div>
+<p class="for_info_only">
+<strong>How it is used:</strong>
+    Pangrams have been used to display typefaces, test equipment, and develop skills in handwriting, calligraphy, and keyboarding for ages.
+</p>
+<p>
+<strong>Precondition:</strong>
+</p>
+
+<ul>
+<li>all(ch in (string.punctuation + string.ascii_letters + " ") for ch in text);</li>
+<li>0 &lt; len(text).</li>
+</ul>
+
+
+<p><a href="https://py.checkio.org/en/mission/pangram">See the task on CheckiO</a></p>

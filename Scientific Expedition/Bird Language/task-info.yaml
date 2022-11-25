@@ -1,0 +1,88 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: |
+    def translate(text: str) -> str:
+        # your code here
+        return text
+
+
+    print("Example:")
+    print(translate("hieeelalaooo"))
+
+    assert translate("hieeelalaooo") == "hello"
+    assert translate("hoooowe yyyooouuu duoooiiine") == "how you doin"
+    assert translate("aaa bo cy da eee fe") == "a b c d e f"
+    assert translate("sooooso aaaaaaaaa") == "sos aaa"
+
+    print("The mission is done! Click 'Check Solution' to earn rewards!")
+  learner_created: false
+status: Solved
+code: |
+  def translate(text: str) -> str:
+      newL=[]
+      z=0
+      i=0   #hieeelalaooo
+      vowels="aeiouy"
+      while z<len(text):
+          if i>0:
+                  i=0
+                  z+=1
+                  continue
+          if text[z] not in vowels:
+              if text[z]==" ":
+                  newL.append(" ")
+                  z+=1
+              else:
+                  newL.append(text[z])
+                  i+=1
+                  z+=1
+          elif text[z] in vowels:
+                  newL.append(text[z])
+                  i+=2
+                  z+=2
+          else:
+                  i+=1
+                  z+=1
+      w = "".join(newL)
+
+      return w
+
+
+  """ while i<len(text):
+          if text[i] not in vowels:
+              newL.append(text[i])
+              i+=2
+          elif text[i] in vowels and text[i]==text[i-1] and newL==[]:
+              newL.append(text[i])
+              i+=2
+          elif text[i] in vowels and text[i-1]==" ":
+              newL.append(text[i-1])
+              i+=1
+          elif text[i] in vowels and text[i]==text[i-1]:
+              newL.append(text[i])
+              i+=2
+          elif text[i] in vowels and text[i-1] not in vowels:
+              newL.append(text[i-1])
+              i+=1
+          elif text[i]==" ":
+              newL.append(text[i])
+              i+=1
+          else:
+              i+=1
+      w = "".join(newL)
+
+      return w"""
+
+
+  print("Example:")
+  print(translate("aaa bo cy da eee fe"))
+
+  assert translate("hieeelalaooo") == "hello"
+  assert translate("hoooowe yyyooouuu duoooiiine") == "how you doin"
+  assert translate("aaa bo cy da eee fe") == "a b c d e f"
+  assert translate("sooooso aaaaaaaaa") == "sos aaa"
+
+  print("The mission is done! Click 'Check Solution' to earn rewards!")
+seconds_from_change: 5508
